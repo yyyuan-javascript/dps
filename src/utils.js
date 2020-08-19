@@ -1,10 +1,12 @@
 const chalk = require('chalk');
+//
 const ora = require('ora');
 const emoji = require('node-emoji');
 
 const {app} = require('../package.json');
 const appName = app.alias;
 
+// 判断是什么系统
 const likeLinux =  process.env.TERM === 'cygwin' || process.platform !== 'win32';
 
 const genArgs = {
@@ -47,7 +49,7 @@ log.info = function(msg) {
 function getAgrType(agr) {
   return Object.prototype.toString.call(agr).split(/\s/)[1].slice(0, -1).toLowerCase();
 }
-
+// node终端加载动画
 function Spinner(color) {
   let opt = likeLinux? {
     spinner: {

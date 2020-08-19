@@ -115,8 +115,9 @@ class DrawPageStructure {
   }
   async start() {
     const pageUrl = this.url;
+    // node终端加载动画
     const spinner = Spinner('magentaBright');
-
+    
 	  spinner.text = '启动浏览器...';
     const pp = await ppteer({
       device: this.device,

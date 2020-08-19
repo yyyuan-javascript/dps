@@ -1,4 +1,4 @@
-#!/usr/bin/env node
+#!/usr/bin/env node 
 
 const program = require('commander')
 const prompts = require('prompts')
@@ -54,8 +54,9 @@ const currDir = process.cwd()
 
   program
   .command('start')
-  .description('start create a skeleton screen')
+  .description('start create a skeleton screen') // 会在help中展示
   .action(function() {
+    // 构建skeleton
     new DrawPageStructure(getDpsconfig()).start();
   });
 
@@ -63,7 +64,7 @@ const currDir = process.cwd()
 
   program.parse(process.argv);
   if (program.args.length < 1) program.help()
-
+// 获取dps配置
 function getDpsconfig() {
   const dpsConfFile = path.resolve(currDir, defConf.filename)
   if(!fs.existsSync(dpsConfFile)) {
