@@ -4,7 +4,7 @@ const ora = require('ora');
 const emoji = require('node-emoji');
 
 const {app} = require('../package.json');
-const appName = app.alias;
+const appName = app.alias;// "dps"
 
 // 判断是什么系统
 const likeLinux =  process.env.TERM === 'cygwin' || process.platform !== 'win32';

@@ -72,6 +72,7 @@ class DrawPageStructure {
       //   this.rootNode,
       //   this.header
       // );
+      //处理传入的参数配置['dps-init-function:value']
       const agrs = genArgs.create({
         init: {
           type: 'function',
@@ -99,7 +100,7 @@ class DrawPageStructure {
         }
       });
       agrs.unshift(evalScripts);
-      html = await page.evaluate.apply(page, agrs);
+      html = await page.evaluate.apply(page, agrs);// page.evaluate(evalScripts,otherArgs)
     } catch (e) {
       log.error('\n[page.evaluate] ' + e.message);
     }
