@@ -37,7 +37,7 @@ class DrawPageStructure {
       this.writePageStructure = writePageStructure;
       this.includeElement = includeElement || function() {};
       this.init = init || function() {};
-
+// 入参处理
       if (this.headless === undefined) this.headless = true;
       if (!url) {
         log.error('please provide entry url !', 1); 
@@ -58,6 +58,7 @@ class DrawPageStructure {
         }
       }
   }
+
   async generateSkeletonHTML(page) {
     let html = '';
 
@@ -98,6 +99,7 @@ class DrawPageStructure {
           value: JSON.stringify(this.header)
         }
       });
+      // evalScripts 用于处理dom节点
       agrs.unshift(evalScripts);
       html = await page.evaluate.apply(page, agrs);
     } catch (e) {
@@ -113,6 +115,7 @@ class DrawPageStructure {
     $(this.injectSelector).html(html);
     fs.writeFileSync(filepath, $.html('html'));
   }
+  // 入口函数
   async start() {
     const pageUrl = this.url;
     // node终端加载动画

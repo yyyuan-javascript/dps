@@ -1,6 +1,6 @@
 
 const dpsConfig = {
-	url: 'http://www.fat1.qa.nt.tripcorp.com/flights/beijing-to-seoul/airfares-bjs-sel/',      // 待生成骨架屏页面的地址，用百度（https://baidu.com）试试也可以
+	url: 'http://www.trip.com/flights/beijing-to-seoul/airfares-bjs-sel/',      // 待生成骨架屏页面的地址，用百度（https://baidu.com）试试也可以
 	output: {
 		filepath: '',   // 生成骨架屏的存放页面，一般为项目的入口页面
 		injectSelector: '#app'  // 生成的骨架屏插入页面的节点

@@ -1,5 +1,6 @@
+// chalk用于修改控制台中字体样式，包括字体样式、字体颜色、背景色等。
 const chalk = require('chalk');
-//
+// ora用于在node终端展示loading动画（可以设置每一帧的样式）
 const ora = require('ora');
 const emoji = require('node-emoji');
 
