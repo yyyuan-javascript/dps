@@ -142,3 +142,5 @@ createSkeletonHTML({
 | init | 开始生成之前的操作 | -- | 否
 | includeElement(node, draw) | 定制某个节点如何生成 | -- | 否
 | writePageStructure(html, ?filepath) | 回调的骨架屏节点 | -- | 否
+
+(https://zhuanlan.zhihu.com/p/74403911)[https://zhuanlan.zhihu.com/p/74403911]

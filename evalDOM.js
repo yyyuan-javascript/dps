@@ -1,9 +1,10 @@
 module.exports = function evalDOM() {
   const ELEMENTS = ['audio', 'button', 'canvas', 'code', 'img', 'input', 'pre', 'svg', 'textarea', 'video', 'xmp'];
+  // style script等tab代码块
   const blocks = [];
   const win_w = window.innerWidth;
   const win_h = window.innerHeight;
-
+// evalDom 入参
   let agrs = arguments;
   if (!agrs.length) agrs = {length: 1, 0: {}};
   let agrs0 = agrs[0];
